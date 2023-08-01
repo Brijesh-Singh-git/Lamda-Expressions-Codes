@@ -11,7 +11,7 @@ class Employee {
 	
 	Employee(String name, int sal, int exp) {  //constructor
 		ename=name;
-		salary=sal;
+		salary=sal; 
 		experience= exp;
 	}
 }
