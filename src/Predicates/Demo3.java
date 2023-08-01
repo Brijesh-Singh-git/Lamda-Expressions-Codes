@@ -2,7 +2,7 @@ package Predicates;
 
 import java.util.function.Predicate;
 
-//Joining predicates - and , or, nor
+//Joining predicates - and , or, negate
 //p1  -> checks number is even
 //p2  -> checks greater than 50 
 
@@ -25,7 +25,29 @@ public class Demo3 {
 				
 				System.out.println(n);
 			}
-		}
+		} 
+		
+		System.out.println();
+		System.out.println("Following are numbers EVEN OR Greater than 50 .....");
+		//or
+		for(int n:a) {
+			
+			if(p1.or(p2).test(n)) { //if(p1.test(n) || p2.test(n))
+				
+				System.out.println(n);
+			}
+		} 
+		
+		System.out.println();
+		System.out.println("Following are numbers EVEN *Negate* Greater than 50 .....");
+		//negate
+		for(int n:a) {
+			
+			if(p1.negate().test(n)) { 
+				
+				System.out.println(n);
+			}
+		} 
 	}
 
 }
